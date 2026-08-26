@@ -1,0 +1,14 @@
+{
+  "info": {
+    "appTitle": "Movie App",
+    "version": 0.2,
+    "creators": [
+      {
+        "name": "Ryan Mulcahy",
+        "role": "Web Developer"
+      }
+      
+    ],
+    "location": "Waterford"
+  } 
+}

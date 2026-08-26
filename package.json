@@ -12,10 +12,12 @@
   ],
   "author": "Ryan Mulcahy",
   "license": "ISC",
-  "description": "A little application",
+  "description": "A little movie application",
   "type": "module",
   "dependencies": {
     "express": "^5.2.1",
+    "express-handlebars": "^9.0.1",
+    "lowdb": "^7.0.1",
     "winston": "^3.19.0"
   },
   "devDependencies": {

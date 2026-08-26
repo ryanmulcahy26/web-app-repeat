@@ -6,7 +6,7 @@ import logger from "./utils/logger.js";
 
 const router = express.Router();
 
-router.get('/', (request, response) => response.send('Welcome to the Playlist app!'));
+router.get('/', (request, response) => response.render('start'));
 
 router.get('/dashboard', (request, response) => {
   const playlist = [
