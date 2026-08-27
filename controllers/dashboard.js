@@ -7,7 +7,7 @@ const dashboard = {
     logger.info("Dashboard page loading!");
     
     const viewData = {
-      title: "Movie App Dashboard"
+      title: "Playlist App Dashboard"
     };
     
     response.render('dashboard', viewData);
@@ -15,4 +15,3 @@ const dashboard = {
 };
 
 export default dashboard;
-
