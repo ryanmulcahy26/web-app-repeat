@@ -2,9 +2,39 @@
 
 <section class="ui left aligned middle aligned segment">
   
-    <h2>Movie App Dashboard</h2>
-      <p>
-        Movies will be displayed here
-      </p>
+  <h2>Movie App Dashboard</h2>
+
+  {{#each movies}}
+  
+    <section class="ui left aligned middle aligned scrolling segment">
+
+      <h3 class="ui header">
+        {{title}}
+      </h3>      
+  
+      <table class="ui unstackable striped table">
+        <thead>
+          <tr>
+            <th>Movie</th>
+            <th>Director</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each movies}}
+            <tr>
+              <td>
+                {{title}}
+              </td>
+              <td>
+                {{director}}
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      
+    </section>
+  
+  {{/each}}
 
 </section>
