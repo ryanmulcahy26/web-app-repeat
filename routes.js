@@ -12,7 +12,6 @@ import about from './controllers/about.js';
 import movie from './controllers/movie.js';
 import accounts from './controllers/accounts.js';
 
-
 router.get('/start', start.createView);
 router.get('/dashboard', dashboard.createView);
 router.get('/about', about.createView);
