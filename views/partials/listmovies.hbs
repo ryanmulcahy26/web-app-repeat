@@ -1,9 +1,12 @@
 {{#if movies}}
+
   <table class="ui unstackable striped table">
     <thead>
       <tr>
         <th>Movie</th>
         <th>Director</th>
+        <th>Year</th>
+        <th>Genre</th>
         <th></th>
       </tr>
     </thead>
@@ -16,9 +19,16 @@
           <td>
             {{director}}
           </td>
-           <td class="center aligned">
-            <a href="/movie/{{../id}}/deletemovie/{{id}}" 
-			        title="Delete movie">
+          <td>
+            {{year}}
+          </td>
+          <td>
+            {{genre}}
+          </td>
+          <td class="center aligned">
+            <a
+              href="/movie/{{../id}}/deletemovie/{{id}}"
+              title="Delete movie">
               <i class="ui black trash icon"></i>
             </a>
           </td>
@@ -26,8 +36,8 @@
       {{/each}}
     </tbody>
   </table>
-  {{else}}
-    <h3 class="ui message">
-      Empty collection!
-    </h3>
+{{else}}
+  <h3 class="ui message">
+    Empty collection!
+  </h3>
 {{/if}}

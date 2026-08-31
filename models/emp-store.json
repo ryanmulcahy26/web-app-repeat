@@ -1,0 +1,31 @@
+{
+  "employees": [
+    {
+      "name": "Ryan",
+      "fullname": "Ryan Mulcahy",
+      "image": "/ryan1.jpeg",
+      "joined": 2026,
+      "job": "Web Developer, irrelevant to the film industry, but a decent fellow",
+      "city": "Waterford",
+      "contacts": 20
+    },
+    {
+      "name": "Ziggy",
+      "fullname": "Ziggy Mulcahy",
+      "image": "/ziggy1.jpeg",
+      "joined": 2026,
+      "job": "Movie Reviewer, with 20 years experience and many connections in the film industry",
+      "city": "Waterford, roaming",
+      "contacts": 18
+    },
+    {
+      "name": "Sky",
+      "fullname": "Sky Mulcahy",
+      "image": "/sky1.jpeg",
+      "joined": 2026,
+      "job": "Hardcore Critic. Known for ending the Hollywood careers of many soon-to-be stars",
+      "city": "Waterford, or Wherever really.",
+      "contacts": 1250
+    }
+  ]
+}

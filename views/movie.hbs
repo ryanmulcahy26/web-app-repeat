@@ -1,12 +1,34 @@
 {{> menu}}
+
 {{#with collection}}
-  <section class="ui center aligned middle aligned scrolling segment">
-    <h2 class="ui header">
-      {{uppercase title}}
-    </h2>
-    {{> listmovies}}
-  </section>
-  <section class="ui center aligned middle aligned segment">
-    {{> addmovie}}
-  </section>
+<section class="ui center aligned middle aligned scrolling segment">
+  <h2 class="ui header">
+    {{uppercase title}}
+  </h2>
+  <form class="ui form" action="/movie/{{id}}" method="GET">
+    <div class="two fields">
+      <div class="field">
+        <label>Sort Movies By</label>
+        <select class="ui dropdown" name="sort">
+          <option value="title">Title</option>
+          <option value="year">Year of Release</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Order</label>
+        <select class="ui dropdown" name="order">
+          <option value="asc">Oldest first</option>
+          <option value="desc">Newest first</option>
+        </select>
+      </div>
+    </div>
+    <button class="ui yellow button" type="submit">
+      Sort Movies
+    </button>
+  </form>
+  {{> listmovies}}
+</section>
+<section class="ui center aligned middle aligned segment">
+  {{> addmovie}}
+</section>
 {{/with}}

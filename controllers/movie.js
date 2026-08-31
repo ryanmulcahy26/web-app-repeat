@@ -8,18 +8,51 @@ import accounts from './accounts.js';
 const movie = {
 
   createView(request, response) {
-    const movieId = request.params.id;
+    const collectionId = request.params.id;
     const loggedInUser = accounts.getCurrentUser(request);
 
-    logger.debug('Movie collection id = ' + movieId);
+    if (loggedInUser) {
+      logger.debug('Movie collection id = ' + collectionId);
 
-    const viewData = {
-      title: 'Movie Collection',
-      collection: movieStore.getMovieCollection(movieId),
-      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
-    };
+      const collection = movieStore.getMovieCollection(collectionId);
 
-    response.render('movie', viewData);
+      const sortField = request.query.sort;
+      const order = request.query.order === 'desc' ? -1 : 1;
+
+      let sortedMovies = collection.movies;
+
+      if (sortField) {
+        sortedMovies = collection.movies.slice().sort((a, b) => {
+
+          if (sortField === 'title') {
+            return a.title.localeCompare(b.title) * order;
+          }
+
+          if (sortField === 'year') {
+            return (a.year - b.year) * order;
+          }
+
+          return 0;
+        });
+      }
+
+      collection.movies = sortedMovies;
+
+      const viewData = {
+        title: 'Movie Collection',
+        collection: collection,
+        fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        titleSelected: request.query.sort === 'title',
+        yearSelected: request.query.sort === 'year',
+        ascSelected: request.query.order === 'asc',
+        descSelected: request.query.order === 'desc',
+      };
+
+      response.render('movie', viewData);
+
+    } else {
+      response.redirect('/');
+    }
   },
 
   addMovie(request, response) {
@@ -29,6 +62,8 @@ const movie = {
       id: uuidv4(),
       title: request.body.title,
       director: request.body.director,
+      year: parseInt(request.body.year),
+      genre: request.body.genre,
     };
 
     movieStore.addMovie(collectionId, newMovie);

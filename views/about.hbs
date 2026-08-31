@@ -1,19 +1,54 @@
-{{> menu}}
+{{> menu id="about"}}
 
-<section class="ui center aligned middle aligned segment">
+<section class="ui segment">
+
   <h2 class="ui header">
-    {{title}}
+    About this Movie App
   </h2>
 
-  <p>Welcome {{fullname}}</p>
+  <h3 class="ui header">
+    Our Team
+  </h3>
 
-  {{#if employees}}
-    <div class="ui list">
-      {{#each employees}}
-        <div class="item">
-          {{name}}
+  <div class="ui three stackable cards">
+
+    {{#each employees}}
+
+      <div class="ui card">
+
+        <div class="image">
+          <img src="{{image}}" alt="{{fullname}}">
         </div>
-      {{/each}}
-    </div>
-  {{/if}}
+
+        <div class="content">
+
+          <div class="header">
+            {{fullname}}
+          </div>
+
+          <div class="meta">
+            <span class="date">
+              Joined in {{joined}}
+            </span>
+          </div>
+
+          <div class="description">
+            {{name}} is a {{job}}. Lives in {{city}}.
+          </div>
+
+        </div>
+
+        <div class="extra content">
+
+          <i class="user icon"></i>
+          {{contacts}} contacts
+
+        </div>
+
+      </div>
+
+    {{/each}}
+
+  </div>
+
 </section>

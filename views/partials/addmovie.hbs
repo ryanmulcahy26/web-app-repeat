@@ -2,14 +2,45 @@
   <div class="two fields">
     <div class="field">
       <label>Title</label>
-      <input type="text" name="title" autofocus required title = "Please include a valid Title"
-	  placeholder="Title">
+      <input
+        type="text"
+        name="title"
+        autofocus
+        required
+        title="Please include a valid Title"
+        placeholder="Title">
     </div>
     <div class="field">
       <label>Director</label>
-      <input type="text" name="director" required title = "Please include a valid Director"
-	  placeholder="Director"  >
+      <input
+        type="text"
+        name="director"
+        required
+        title="Please include a valid Director"
+        placeholder="Director">
     </div>
   </div>
-  <button class="ui blue submit button">Add Movie</button>
+  <div class="two fields">
+    <div class="field">
+      <label>Year of Release</label>
+      <input
+        type="number"
+        name="year"
+        required
+        min="1800"
+        max="2028"
+        placeholder="Year">
+    </div>
+    <div class="field">
+      <label>Genre</label>
+      <input
+        type="text"
+        name="genre"
+        required
+        placeholder="Genre">
+    </div>
+  </div>
+  <button class="ui yellow submit button">
+    Add Movie
+  </button>
 </form>

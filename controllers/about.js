@@ -5,23 +5,25 @@ import accounts from './accounts.js';
 import empStore from '../models/emp-store.js';
 
 const about = {
-createView(request, response) {
-  const loggedInUser = accounts.getCurrentUser(request);
 
-  logger.info("About page loading!");
+  createView(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
 
-  if (loggedInUser) {
-    const viewData = {
-      title: 'About the Movie App',
-      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
-      employees: empStore.getEmployees(),
-    };
+    logger.info("About page loading!");
 
-    response.render('about', viewData);
-  } else {
-    response.redirect('/');
-  }
-},
+    if (loggedInUser) {
+      const viewData = {
+        title: 'About the Movie App',
+        fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        employees: empStore.getEmployees(),
+      };
+
+      response.render('about', viewData);
+    } else {
+      response.redirect('/');
+    }
+  },
+
 };
 
 export default about;
