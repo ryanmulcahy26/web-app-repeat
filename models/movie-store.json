@@ -1,18 +1,55 @@
 {
   "movieCollection": [
     {
-      "id": "eb9d9dbc-104e-4e3b-8e41-36a25e245cc2",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "id": "319a05fe-322c-4949-b076-3b8b1a236f91",
       "title": "My Favourite Movies",
-      "date": "2026-08-31T12:22:33.644Z",
       "rating": 5,
       "movies": [
         {
-          "id": "edc45f1a-78b1-488e-a032-6db863d7d661",
+          "id": "44613a80-11dd-4f7a-86bf-069a866e5b53",
           "title": "Trainspotting",
-          "director": "Danny Boyle",
-          "rating": 5
+          "director": "Danny Boyle"
+        },
+        {
+          "id": "0c6a492c-fc95-4d16-a8dd-493fba1243fc",
+          "title": "In Bruges",
+          "director": "Martin McDonagh"
+        },
+        {
+          "id": "9f6f6700-2dc1-4334-87d0-0336db7c7e54",
+          "title": "Perfect Blue",
+          "director": "Satoshi Kon"
         }
-      ]
+      ],
+      "date": "2026-08-31T14:37:53.663Z"
+    },
+    {
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "id": "9111d482-9b24-4e35-93b0-80fa1bfbee72",
+      "title": "Non-English Movies",
+      "rating": 4,
+      "movies": [],
+      "date": "2026-08-31T14:39:34.500Z"
+    },
+    {
+      "userid": "e9f02805-9086-4d66-b699-e488a1392eef",
+      "id": "738bbf19-a3e4-4928-b4f4-4cd60d7db519",
+      "title": "Batman Movies",
+      "rating": 4,
+      "movies": [
+        {
+          "id": "f19387aa-4ede-42a4-96f1-ef28ccb17787",
+          "title": "Batman Begins",
+          "director": "Christopher Nolan"
+        },
+        {
+          "id": "99ee4034-3a01-4310-9ed0-1ae350f02d96",
+          "title": "The Batman",
+          "director": "Matt Reeves"
+        }
+      ],
+      "date": "2026-08-31T14:41:39.730Z"
     }
   ]
-} 
+}

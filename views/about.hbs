@@ -1,0 +1,19 @@
+{{> menu}}
+
+<section class="ui center aligned middle aligned segment">
+  <h2 class="ui header">
+    {{title}}
+  </h2>
+
+  <p>Welcome {{fullname}}</p>
+
+  {{#if employees}}
+    <div class="ui list">
+      {{#each employees}}
+        <div class="item">
+          {{name}}
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</section>

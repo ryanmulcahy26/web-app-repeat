@@ -5,7 +5,7 @@ import JsonStore from './json-store.js';
 
 const movieStore = {
 
-  store: new JsonStore('./models/movie-store.json', { movieCollection: [] }),
+  store: new JsonStore('./models/movie-store.json', {movieCollection: [] }),
   collection: 'movieCollection',
   array: 'movies',
 
@@ -15,6 +15,13 @@ const movieStore = {
 
   getMovieCollection(id) {
     return this.store.findOneBy(this.collection, (c) => c.id === id);
+  },
+
+  getUserMovieCollections(userid) {
+    return this.store.findBy(
+      this.collection,
+      (collection => collection.userid === userid)
+    );
   },
 
   addMovie(id, movie) {
@@ -33,6 +40,25 @@ const movieStore = {
     const collection = this.getMovieCollection(id);
     this.store.removeCollection(this.collection, collection);
   },
+
+  searchMovies(search) {
+    return this.store.findBy(
+      this.collection,
+      (collection =>
+        collection.title.toLowerCase().includes(search.toLowerCase())
+      )
+    );
+  },
+
+  searchUserMovieCollections(search, userid) {
+    return this.store.findBy(
+      this.collection,
+      (collection =>
+        collection.userid === userid &&
+        collection.title.toLowerCase().includes(search.toLowerCase())
+      )
+    );
+  }
 
 };
 

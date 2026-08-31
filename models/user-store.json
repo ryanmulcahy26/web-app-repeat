@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "firstName": "ryan",
+      "lastName": "mulcahy",
+      "email": "ryan@mulcahy.com",
+      "password": "secret",
+      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
+    },
+    {
+      "firstName": "ziggy",
+      "lastName": "mulcahy",
+      "email": "ziggy@mulcahy.com",
+      "password": "secret",
+      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+    },
+    {
+      "firstName": "Sky",
+      "lastName": "Mulcahy",
+      "email": "sky@mulcahy.com",
+      "password": "secret",
+      "id": "e9f02805-9086-4d66-b699-e488a1392eef"
+    }
+  ]
+}

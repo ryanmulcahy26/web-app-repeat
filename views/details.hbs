@@ -1,16 +1,32 @@
 {{> menu id="details"}}
+
 <section class="ui center aligned middle aligned segment">
   <h2>Movie App Details</h2>
+
   <h3 class="ui header">
     App Details
   </h3>
+
   <p>
     The movie app now contains:
   </p>
+
   {{#with stats}}
+
   <div class="ui center aligned grid">
+
     <div class="ui sixteen wide column">
-      <div class="ui centered three statistics">
+      <div class="ui centered four statistics">
+
+        <div class="ui statistic">
+          <div class="value">
+            <i class="users icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumUsers}} users signed up
+          </div>
+        </div>
+
         <div class="ui statistic">
           <div class="value">
             <i class="folder open icon"></i>
@@ -19,6 +35,7 @@
             {{displayNumCollections}} collections
           </div>
         </div>
+
         <div class="ui red statistic">
           <div class="value">
             <i class="film icon"></i>
@@ -27,24 +44,30 @@
             {{displayNumMovies}} movies
           </div>
         </div>
+
         <div class="ui blue statistic">
           <div class="value">
             <i class="balance scale icon"></i>
           </div>
           <div class="label">
-            Average movies per <br> collection: {{displayAverage}}
+            Average movies per <br>
+            collection: {{displayAverage}}
           </div>
         </div>
+
       </div>
     </div>
+
     <div class="ui sixteen wide column">
       <div class="ui centered three statistics">
+
         <div class="ui yellow statistic">
           <div class="value">
             <i class="star icon"></i>
           </div>
           <div class="label">
             Highest Rated collections: {{highest}} stars
+
             <table>
               {{#each displayFav}}
               <tr>
@@ -52,8 +75,10 @@
               </tr>
               {{/each}}
             </table>
+
           </div>
         </div>
+
         <div class="ui green statistic">
           <div class="value">
             <i class="dot circle outline icon"></i>
@@ -62,24 +87,30 @@
             Average Rating: {{displayAvgRating}}
           </div>
         </div>
+
         <div class="ui purple statistic">
           <div class="value">
             <i class="plus icon"></i>
           </div>
           <div class="label">
-            Largest collection: {{maxMovies}} movies
+            Largest collection: {{longest}} movies
+
             <table>
-              {{#each displayLargest}}
+              {{#each longestTitles}}
               <tr>
                 <td>{{this}}</td>
               </tr>
               {{/each}}
             </table>
+
           </div>
         </div>
+
       </div>
     </div>
-    
+
   </div>
+
   {{/with}}
+
 </section>

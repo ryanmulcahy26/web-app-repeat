@@ -1,13 +1,37 @@
-<section class="ui left aligned middle aligned segment">
-  
-  <h2>Movie App Dashboard</h2>
-  
+<section class="dashboard-header">
+  <h2 class="title">Movie App Dashboard</h2>
+    <form action="/searchCategory" method="GET" class="ui form">
+        
+      <div class="ui inline fields">
+        <div class="field">
+          <input type="text" name="searchTerm" placeholder="Search by title..." value="{{search}}">
+        </div>
+        <div class="field">
+          <label>Sort by:</label>
+          <select class="ui dropdown" name="sort" onchange="this.form.submit()">
+            <option value="title" {{#if titleSelected}}selected{{/if}}>Title</option>
+            <option value="rating" {{#if ratingSelected}}selected{{/if}}>Rating</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Order:</label>
+          <select class="ui dropdown" name="order" onchange="this.form.submit()">
+            <option value="asc" {{#if ascSelected}}selected{{/if}}>↑</option>
+            <option value="desc" {{#if descSelected}}selected{{/if}}>↓</option>
+          </select>
+        </div>
+      </div>
+    </form>
+</section>
+
+{{#unless search}}
   {{#unless movies}}
     <h3 class="ui message">
-      Start adding your movies!
+       Start adding your movies!
     </h3>
   {{/unless}}
-  {{#each movies}}
+{{/unless}}
+{{#each movies}}
     <section class="ui left aligned middle aligned segment">
       <h3 class="ui header">
         {{uppercase title}}
@@ -52,4 +76,3 @@
 
     </section>
   {{/each}}
-</section>
