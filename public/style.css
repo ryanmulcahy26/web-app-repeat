@@ -124,15 +124,26 @@ a:hover {
   color: dimgray;
 }
 
-.ui.cards > .card > .image img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-}
-
 .start-image {
   width: 70%;
   height: auto;
   display: block;
   margin: auto;
+}
+
+.start-images {
+  width: 80%;
+  margin: 30px auto !important;
+}
+
+.start-images img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.ui.cards > .card > .image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
 }

@@ -1,66 +1,78 @@
 {{> menu}}
 
 <section class="ui center aligned middle aligned segment">
+
   <h2>Welcome to Ryan's Movie App</h2>
-    <p>
-      This app will allow users to create and maintain a list of their favorite movies.
-    </p>
-    <img class="start-image" src="/start-poster-movie.jpg">
 
-      <div class="ui five statistics" style="margin-top: 1em;">
-    
-  {{#with info}}
+  <p>
+    This app will allow users to create and maintain a list of their favorite movies.
+  </p>
 
-<div class="statistic">
-  <div class="value">
-    <i class="gray film icon"></i> 
-  </div>
-  <div class="label">
-    App Title: <br>
-    {{appTitle}}
-  </div>
-</div>
+  <div class="ui five statistics" style="margin-top: 1em;">
 
-<div class="statistic">
-  <div class="value">
-    <i class="gray code branch icon"></i> 
-  </div>
-  <div class="label">
-    App Version: <br>
-    Version {{version}}
-  </div>
-</div>
+    {{#with info}}
 
-<div class="statistic">
-  <div class="value">
-    <i class="gray map pin icon"></i> 
-  </div>
-  <div class="label">
-    Made in: <br>
-    {{location}}
-  </div>
-</div>
+    <div class="statistic">
+      <div class="value">
+        <i class="gray film icon"></i>
+      </div>
+      <div class="label">
+        {{appTitle}}
+      </div>
+    </div>
 
-<div class="statistic">
-  <div class="value">
-    <i class="gray user icon"></i> 
-  </div>
-  <div class="label">
-    Created by: <br>
-    {{creators.0.name}}
-  </div>
-</div>
+    <div class="statistic">
+      <div class="value">
+        <i class="gray code branch icon"></i>
+      </div>
+      <div class="label">
+        Version {{version}}
+      </div>
+    </div>
 
-<div class="statistic">
-  <div class="value">
-    <i class="gray retweet icon"></i> 
-  </div>
-  <div class="label">
-    Share with Friends!: <br>
-    {{share}}
-  </div>
-</div>
-{{/with}}
+    <div class="statistic">
+      <div class="value">
+        <i class="gray map pin icon"></i>
+      </div>
+      <div class="label">
+        {{location}}
+      </div>
+    </div>
 
-</div>
+    <div class="statistic">
+      <div class="value">
+        <i class="gray user icon"></i>
+      </div>
+      <div class="label">
+        Created by: <br>
+        {{creators.0.name}}
+      </div>
+    </div>
+
+    <div class="statistic">
+      <div class="value">
+        <i class="gray retweet icon"></i>
+      </div>
+      <div class="label">
+        Share with Friends! <br>
+        {{share}}
+      </div>
+    </div>
+
+    {{/with}}
+
+  </div>
+
+  <div class="ui two column centered grid start-images">
+
+    <div class="column">
+      <img src="/movie1.jpg" alt="Movie image">
+    </div>
+
+    <div class="column">
+      <img src="/movie2.jpeg" alt="Movie image">
+    </div>
+
+  </div>
+
 </section>
