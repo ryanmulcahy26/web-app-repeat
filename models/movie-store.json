@@ -1,27 +1,6 @@
 {
   "movieCollection": [
     {
-      "id": "01",
-      "title": "Christopher Nolan Films",
-      "movies": [
-        {
-          "id": "04",
-          "title": "Inception",
-          "director": "Christopher Nolan"
-        },
-        {
-          "id": "05",
-          "title": "Interstellar",
-          "director": "Christopher Nolan"
-        },
-        {
-          "id": "06",
-          "title": "The Dark Knight",
-          "director": "Christopher Nolan"
-        }
-      ]
-    },
-    {
       "id": "02",
       "title": "Studio Ghibli Films",
       "movies": [

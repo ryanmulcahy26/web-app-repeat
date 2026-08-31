@@ -1,0 +1,34 @@
+<section class="ui left aligned middle aligned segment">
+  
+  <h2>Movie App Dashboard</h2>
+  
+  {{#unless movies}}
+    <h3 class="ui message">
+      Start adding your movies!
+    </h3>
+  {{/unless}}
+  {{#each movies}}
+    <section class="ui left aligned middle aligned segment">
+      <h3 class="ui header">
+        {{title}}
+      </h3>
+      
+      {{#if movies}}
+        <p>
+          Total movies: {{movies.length}}
+        </p>
+      {{else}}
+        <p>
+          Empty collection!
+        </p>
+      {{/if}}
+	  <a href="/movie/{{id}}">
+	     <i class = "ui open folder outline black icon"></i>
+	  </a>
+    <a href="/dashboard/deletecollection/{{id}}">
+   <i class="ui trash black icon"></i>
+    </a> 
+
+    </section>
+  {{/each}}
+</section>

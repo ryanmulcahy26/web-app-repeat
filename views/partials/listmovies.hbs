@@ -1,0 +1,33 @@
+{{#if movies}}
+  <table class="ui unstackable striped table">
+    <thead>
+      <tr>
+        <th>Movie</th>
+        <th>Director</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each movies}}
+        <tr>
+          <td>
+            {{title}}
+          </td>
+          <td>
+            {{director}}
+          </td>
+           <td class="center aligned">
+            <a href="/movie/{{../id}}/deletemovie/{{id}}" 
+			        title="Delete movie">
+              <i class="ui black trash icon"></i>
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+    <h3 class="ui message">
+      Empty collection!
+    </h3>
+{{/if}}

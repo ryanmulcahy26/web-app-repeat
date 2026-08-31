@@ -1,16 +1,22 @@
 'use strict';
 
 import express from 'express';
-import logger from "./utils/logger.js";
-import dashboard from "./controllers/dashboard.js";
-
 const router = express.Router();
+import logger from "./utils/logger.js";
 
-router.get('/', (request, response) => response.render('start'));
+import start from './controllers/start.js';
+import dashboard from './controllers/dashboard.js';
+import about from './controllers/about.js';
+import movie from './controllers/movie.js';
 
+router.get('/', start.createView);
 router.get('/dashboard', dashboard.createView);
-router.get('/about', (request, response) => response.send('About the app page'));
-router.get('/details', (request, response) => response.send('App details page'));
+router.get('/about', about.createView);
+router.get('/movie/:id', movie.createView);
+router.get('/movie/:id/deletemovie/:movieid', movie.deleteMovie);
+router.get('/dashboard/deletecollection/:id', dashboard.deleteCollection);
+router.post('/movie/:id/addmovie', movie.addMovie);
+router.post('/dashboard/addcollection', dashboard.addCollection);
 
 router.get('/error', (request, response) => response.status(404).end('Page not found.'));
 

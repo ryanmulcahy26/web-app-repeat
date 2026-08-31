@@ -2,6 +2,7 @@
 
 import logger from "../utils/logger.js";
 import movieStore from "../models/movie-store.js";
+import { v4 as uuidv4 } from 'uuid';
 
 const dashboard = {
   createView(request, response) {
@@ -15,6 +16,23 @@ const dashboard = {
     logger.debug(viewData.movies);
     
     response.render('dashboard', viewData);
+  },
+
+  addCollection(request, response) {
+    const newCollection = {
+      id: uuidv4(),
+      title: request.body.title,
+      movies: [],
+    };
+    movieStore.addCollection(newCollection);
+    response.redirect('/dashboard');
+  },
+
+  deleteCollection(request, response) {
+    const collectionId = request.params.id;
+    logger.debug(`Deleting Collection ${collectionId}`);
+    movieStore.removeCollection(collectionId);
+    response.redirect("/dashboard");
   },
 };
 
