@@ -10,20 +10,41 @@
   {{#each movies}}
     <section class="ui left aligned middle aligned segment">
       <h3 class="ui header">
-        {{title}}
+        {{uppercase title}}
       </h3>
       
-      {{#if movies}}
-        <p>
-          Total movies: {{movies.length}}
-        </p>
-      {{else}}
-        <p>
-          Empty collection!
-        </p>
-      {{/if}}
+     <p>
+    <i class="film icon"></i>
+    {{#if movies}}
+        Total movies:
+        {{movies.length}}
+    {{else}}
+        Empty collection!
+    {{/if}}
+    {{#if date}}
+        <br>
+        <i class="calendar alternate outline icon"></i>
+        Created on <i>{{formatDate date}}</i>
+    {{/if}}
+     </p>
+
+    {{#if rating}}
+    <p>
+        <span 
+            class="ui yellow disabled rating" 
+            data-icon="star" 
+            data-rating="{{rating}}" 
+            data-max-rating="5">
+        </span>
+
+        <span style="color: grey; font-size: 90%; font-style: italic">
+              {{highlightPopular rating}}
+        </span>
+    </p>
+    {{/if}}
+
 	  <a href="/movie/{{id}}">
-	     <i class = "ui open folder outline black icon"></i>
+	     <i class = "eye icon"></i>
 	  </a>
     <a href="/dashboard/deletecollection/{{id}}">
    <i class="ui trash black icon"></i>

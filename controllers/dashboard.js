@@ -19,10 +19,14 @@ const dashboard = {
   },
 
   addCollection(request, response) {
+    const timestamp = new Date();
+    
     const newCollection = {
       id: uuidv4(),
       title: request.body.title,
-      movies: [],
+      date: timestamp,
+      rating: parseInt(request.body.rating),
+      movies: []
     };
     movieStore.addCollection(newCollection);
     response.redirect('/dashboard');
