@@ -4,12 +4,8 @@
   <h2>Movie App Details</h2>
 
   <h3 class="ui header">
-    App Details
-  </h3>
-
-  <p>
     The movie app now contains:
-  </p>
+  </h3>
 
   {{#with stats}}
 
@@ -20,7 +16,7 @@
 
         <div class="ui statistic">
           <div class="value">
-            <i class="yellow users icon"></i>
+            <i class="users icon"></i>
           </div>
           <div class="label">
             {{displayNumUsers}} users signed up
@@ -29,23 +25,23 @@
 
         <div class="ui statistic">
           <div class="value">
-            <i class="yellow folder open icon"></i>
+            <i class="folder open icon"></i>
           </div>
           <div class="label">
             {{displayNumCollections}} collections
           </div>
         </div>
 
-        <div class="ui yellow statistic">
+        <div class="ui statistic">
           <div class="value">
-            <i class="yellow film icon"></i>
+            <i class="film icon"></i>
           </div>
           <div class="label">
             {{displayNumMovies}} movies
           </div>
         </div>
 
-        <div class="ui yellow statistic">
+        <div class="ui statistic">
           <div class="value">
             <i class="balance scale icon"></i>
           </div>
@@ -61,48 +57,49 @@
     <div class="ui sixteen wide column">
       <div class="ui centered three statistics">
 
-        <div class="ui yellow statistic">
+        <div class="ui statistic">
           <div class="value">
             <i class="star icon"></i>
           </div>
-          <div class="label">
-            Highest Rated collections: {{highest}} stars
 
-            <table>
+          <div class="label">
+            Highest Rated Collections: {{highest}} stars
+
+            <table class="ui centered table">
               {{#each displayFav}}
               <tr>
                 <td>{{this}}</td>
               </tr>
               {{/each}}
             </table>
-
           </div>
         </div>
 
-        <div class="ui yellow statistic">
+        <div class="ui statistic">
           <div class="value">
             <i class="dot circle outline icon"></i>
           </div>
+
           <div class="label">
             Average Rating: {{displayAvgRating}}
           </div>
         </div>
 
-        <div class="ui yellow statistic">
+        <div class="ui statistic">
           <div class="value">
             <i class="plus icon"></i>
           </div>
-          <div class="label">
-            Largest collection: {{longest}} movies
 
-            <table>
+          <div class="label">
+            Largest Collection: {{longest}} movies
+
+            <table class="ui centered table">
               {{#each longestTitles}}
               <tr>
                 <td>{{this}}</td>
               </tr>
               {{/each}}
             </table>
-
           </div>
         </div>
 
@@ -112,5 +109,4 @@
   </div>
 
   {{/with}}
-
 </section>

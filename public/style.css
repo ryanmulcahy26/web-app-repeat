@@ -1,24 +1,138 @@
-table {
-  margin:auto
+body {
+  background-color: lightgray;
+  color: dimgray;
 }
 
-.dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5em;
+.ui.segment {
+  background-color: whitesmoke !important;
+  color: dimgray !important;
+  border-color: lightgray !important;
 }
 
-.name{
-  padding-top:22.5px;
-  padding-right:5px;
-  line-height:20px;
-  font-weight:bold;
-  text-transform:capitalize;
+.ui.menu {
+  background-color: whitesmoke !important;
+  border-color: lightgray !important;
+}
+
+.ui.menu .item {
+  color: dimgray !important;
+}
+
+.ui.menu .header.item,
+.ui.menu .header.item a {
+  color: slategray !important;
+}
+
+.ui.menu .item:hover {
+  background-color: lightgray !important;
+  color: black !important;
+}
+
+.ui.menu .active.item {
+  background-color: lightgray !important;
+  color: slategray !important;
+}
+
+h1,
+h2,
+.ui.header {
+  color: slategray !important;
+}
+
+h3 {
+  color: dimgray !important;
+}
+
+p {
+  color: dimgray;
+}
+
+.ui.form label {
+  color: dimgray !important;
+}
+
+.ui.form input {
+  background-color: white !important;
+  color: dimgray !important;
+  border-color: lightgray !important;
+}
+
+.ui.form input::placeholder {
+  color: darkgray;
+}
+
+.ui.table {
+  background-color: whitesmoke !important;
+  color: dimgray !important;
+  border-color: lightgray !important;
+}
+
+.ui.table thead th {
+  background-color: lightgray !important;
+  color: dimgray !important;
+}
+
+.ui.table tbody tr {
+  background-color: whitesmoke !important;
+  color: dimgray !important;
+}
+
+.ui.card,
+.ui.cards > .card {
+  background-color: whitesmoke !important;
+}
+
+.ui.card .content,
+.ui.cards > .card > .content {
+  background-color: whitesmoke !important;
+}
+
+.ui.card .header,
+.ui.cards > .card .header {
+  color: slategray !important;
+}
+
+.ui.card .description,
+.ui.cards > .card .description {
+  color: dimgray !important;
+}
+
+.ui.statistic > .label,
+.ui.statistics .statistic > .label {
+  color: dimgray !important;
+}
+
+.ui.blue.button {
+  background-color: slategray !important;
+  color: white !important;
+}
+
+.ui.blue.button:hover {
+  background-color: dimgray !important;
+}
+
+.ui.message {
+  background-color: lightgray !important;
+  color: dimgray !important;
+}
+
+a {
+  color: slategray;
+}
+
+a:hover {
+  color: dimgray;
 }
 
 .ui.cards > .card > .image img {
   width: 100%;
   height: 450px;
   object-fit: cover;
+}
+
+.start-image {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: auto;
 }
